@@ -59,7 +59,21 @@ The experiment was designed by dividing it into 4 experiments: 1) Initial archit
 | Dense (2 nodes)            | ✓                    | ✓                   | ✓                  | ✓                   |
 | Activation (Softmax)       | ✓                    | ✓                   | ✓                  | ✓                   |
 
+## Results and Conclusion
+##### Model Performance Comparison (% Accuracy)
 
+| Model        | Initial   | Batch Norm | Dropout (50%) | Dropout (25%) | Batch Norm + Dropout (25%) |
+|--------------|-----------|------------|---------------|---------------|----------------------|
+| DeiT-Tiny    | 98.31%    | 98.12%     | 97.93%        | 98.87%        | 97.55%               |
+| ViT-L/16     | 96.61%    | 94.73%     | 94.73%        | 96.42%        | 93.79%               |
+| ViT-B/16     | 98.31%    | 97.74%     | 97.18%        | 98.49%        | **99.06%**           |
+
+
+Key observations to highlight:
+1.	**Best Performer:** ViT-B/16 with BatchNorm + Dropout (25%) achieved highest accuracy (99.06%)
+2.	**Dropout Impact:** 25% dropout generally outperformed 50% across all models
+3.	**Architecture Sensitivity:** ViT-L/16 showed most variance with regularization
+ViT-B/16 demonstrated the most robustness to regularization, with the combined BatchNorm + Dropout (25%) configuration yielding optimal results. Notably, initial architectures DeiT-Tiny maintained strong performance without complex regularization, suggesting potential efficiency advantages for resource-constrained deployments.
 
 
 
