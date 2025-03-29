@@ -24,6 +24,13 @@ The dataset consists of images of good and damaged wooden pallets (2 classes):
 -	**Total:** 1,182 images
 From the dataset, each class was divided into a train set, a validation set, and a test set, respectively, at a ratio of 70%, 15%, and 15%.
 
+##### Example of normal pallet.
+![image](https://github.com/user-attachments/assets/e26ab82d-3250-42d6-8f80-83933ef39ce1)
+
+##### Example of damaged pallet.
+![image](https://github.com/user-attachments/assets/9f6d8d70-b303-495b-a5b2-64bff080f01a)
+
+
 #### Note on Data Access
 The data supporting the findings of this study are not publicly accessible due to company policy.
 
